@@ -17,7 +17,7 @@
     max-width: 540px;
     background: #fff;
     margin: 100px auto 20px;
-    padding: 40px 30px 70px;
+    padding: 40px 15px 70px; 
     border-radius: 10px;
 }
 
@@ -35,11 +35,9 @@
 
 .row {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column; 
     background: #edeef0;
     border-radius: 30px;
-    padding-left: 20px;
     margin-bottom: 25px;
 }
 
@@ -49,12 +47,13 @@ input {
     outline: none;
     background: transparent;
     padding: 10px;
+    margin-bottom: 10px; 
 }
 
 button {
     border: none;
     outline: none;
-    padding: 16px 30px; 
+    padding: 16px 20px; 
     background: #ff5945;
     color: #fff;
     font-size: 16px;
@@ -65,7 +64,7 @@ button {
 ul li {
     list-style: none;
     font-size: 17px;
-    padding: 12px 8px 12px 30px;
+    padding: 12px 8px 12px 20px; 
     user-select: none;
     cursor: pointer;
     position: relative;
@@ -74,8 +73,8 @@ ul li {
 ul li::before {
     content: '';
     position: absolute;
-    height: 20px; 
-    width: 20px; 
+    height: 28px;
+    width: 28px;
     border-radius: 50%;
     background-image: url(./images/unchecked.png);
     background-size: cover;
@@ -97,11 +96,11 @@ ul li span {
     position: absolute;
     right: 0;
     top: 5px;
-    width: 30px; 
-    height: 30px; 
-    font-size: 18px; 
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
     color: #555;
-    line-height: 30px;
+    line-height: 40px;
     text-align: center;
     border-radius: 50%;
 }
@@ -110,13 +109,14 @@ ul li span:hover {
     background: #edeef0;
 }
 
-@media screen and (max-width: 768px) {
-    button {
-        padding: 16px 20px; 
+@media (max-width: 540px) {
+    .todo-app {
+        padding: 40px 10px 70px;
     }
 
+    input,
+    button,
     ul li {
-        font-size: 16px;
-        padding: 10px 8px 10px 20px; 
+        width: 100%; 
     }
 }
