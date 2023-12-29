@@ -64,11 +64,10 @@ button {
 ul li {
     list-style: none;
     font-size: 17px;
-    padding: 12px 8px;
+    padding: 12px 20px;
     user-select: none;
     cursor: pointer;
     position: relative;
-    margin-bottom: 10px;
 }
 
 ul li::before {
@@ -80,9 +79,8 @@ ul li::before {
     background-image: url(./images/unchecked.png);
     background-size: cover;
     background-position: center;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 0;
+    top: 8px;
+    left: -4px;
 }
 
 ul li.checked {
@@ -97,8 +95,7 @@ ul li.checked::before {
 ul li span {
     position: absolute;
     right: 0;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 5px;
     width: 40px;
     height: 40px;
     font-size: 22px;
@@ -117,10 +114,7 @@ ul li span:hover {
         padding: 40px 10px 70px;
     }
 
-    input,
-    button,
-    ul li,
-    ul li span {
-        width: 100%;
+    ul li {
+        padding: 12px 10px;
     }
 }
